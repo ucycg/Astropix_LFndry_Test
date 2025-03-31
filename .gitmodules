@@ -1,0 +1,9 @@
+[submodule "astropix-fw"]
+	path = astropix-fw
+	url = https://github.com/ucycg/astropix-fw
+[submodule "astropix-python-LFndry-Test"]
+	path = astropix-python-LFndry-Test
+	url = https://github.com/ucycg/astropix-python-LFndry-Test
+[submodule "Measurements_TestScriptProcessor"]
+	path = Measurements_TestScriptProcessor
+	url = https://github.com/ucycg/Measurements_TestScriptProcessor
