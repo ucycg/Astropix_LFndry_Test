@@ -1,5 +1,7 @@
 # Astropix_LFndry_Test
 
+![alt text](https://github.com/ucycg/Astropix_LFndry_Test/blob/main/docu/Astropix_LFndry_Testchip.png)
+
 This super repository shares all necessary steps and procedures including the required software in order to make various analogue measurements with the Astropix-LFoundry-Testchip.
 
 The measurements conducted so far are:
@@ -30,8 +32,8 @@ First of all the requirements until this step here are listed.
 
 1. AstPx_LFndry_Tst PCB is needed with a bonded Astropix-LFoundry-Testchip
 2. Further a Nexus Video FPGA Testboard and a connected  GECCO PCB including an injection card for Ampout/Hitbus measurements
-3. 3 Source Power Supply for the Gecco PCB to generate Testchip voltages
+3. Power Supply with 3 distinct sources for the Gecco PCB to generate Testchip voltages
 4. SMU to generate the HV Signal 
-5. Enough SMA connector cables for an Analogue oscilloscope measurement
+5. SMA connector cables for analogue oscilloscope measurement and to connect the SMU with the PCB
 
 ### Setup
