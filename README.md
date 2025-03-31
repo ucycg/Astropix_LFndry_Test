@@ -1,6 +1,8 @@
 # Astropix_LFndry_Test
 
-![alt text](https://github.com/ucycg/Astropix_LFndry_Test/blob/main/docu/Astropix_LFndry_Testchip.png =100x20)
+<p align="center">
+    <img src="docu/Astropix_LFndry_Testchip.png" alt="placeholder" width="30%" height="30%">
+</p>
 
 This super repository shares all necessary steps and procedures including the required software in order to make various analogue measurements with the Astropix-LFoundry-Testchip.
 
