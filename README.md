@@ -40,6 +40,32 @@ First of all the requirements until this step here are listed.
 
 ### Setup
 
+#### I-V Curve Measurement
+
+The actual setup up for the I-V curve measurement is much simpler.
+
+Only the 2470 SMU and the Testpcb with the bonded chip is required.
+
+So far the SMU 2470 has been controlled via a LAN connection. With that an easy control for sweeps is possible via the provided python script in the Measurements_TestScriptProcessor repository.
+
+For now sadly the current IPv4 address needs to be manually read from the SMU device Menu 
+--> Press the MENU button and then read it from Communication->LAN
+
+1. To begin the measurements only connect the -HV potential from the SMU to the SMA connector on the testpcb and then power up the SMU.
+
+2. The provided script RES_SVMI_TSP.py for the I-V Curve measurement first sweeps the voltage between 0V and -200V in steps of 10V. Afterwards the respective measured current at that point is stored inside a .csv file.
+
+3. Finally a basic I-V curve can be plotted from the .csv file with the plot_ui.py script.
+
+Further the LF_TST_PREC_BREAKDOWN_SVMI_TSP.py performs a more narrow analysis around the actualy fully depleted diode operation region.
+(-196/-205V in steps of 0.1V).
+
+#### Register configuration for Ampout/Hitbus measurements
+
+The Astropix Lfoundry Testchip possesses a configuration register for different analog current sources and internal voltages.
+
+An overview of this register topology is given below.
+
 #### Ampout and Hitbus measurements
 
 First of all the generated bitfile for the FPGA hardwaredesign has to be installed via the PROG. USB micro port. This can be executed via Vivado directly in the GUI mode via the Hardware Manager 
@@ -52,29 +78,11 @@ Afterwards we can start the Power Supply and supply the Gecco PCB with
 2. Voltage: 1.8V for POW4 which represents the VDD voltage for the Testchip
 3. Voltage: 0V for POW6 which sets the ground potential for Vminus Port of the Testchip
 
-After that the 2470 SMU can be connected directly to the SMA -HV port on
-the TestPCB here the -HV Potential is flexible between 0V and ~ -200V
+After that the 2470 SMU can be connected directly to the SMA -HV port on the TestPCB here the -HV Potential is flexible between 0V and ~ -200V
 
-#### I-V Curve Measurement
+Finally for measurement purposes an oscilloscope can be connected as well to the SMA Ampout respective Hitbus Ports on the TestPCB
 
-The actual setup up for the I-V curve measurement is much simpler.
-
-Only the 2470 SMU and the Testpcb with the bonded chip is required.
-
-So far the SMU 2470 has been controlled via a LAN connection. With that an easy control for sweeps is possible via the provided python script in the Measurements_TestScriptProcessor repository.
-
-1. To begin the measurements only connect the -HV potential from the SMU to the SMA connector on the testpcb and then power up the SMU.
-
-2. The provided script RES_SVMI_TSP.py for the I-V Curve measurement first sweeps the voltage between 0V and -200V in steps of 10V. Afterwards the respective measured current at that point is stored inside a .csv file.
-
-3. Finally a basic I-V curve can be plotted from the .csv file with the plot_ui.py script.
-
-Further the LF_TST_PREC_BREAKDOWN_SVMI_TSP.py performs a more narrow analysis around the actualy fully depleted diode operation region.
-(-196/-205V in steps of 0.1V).
-
-
-
-
+These are analog signal outputs directly from the LFoundry_Testchip 
 
 ## Results
 
