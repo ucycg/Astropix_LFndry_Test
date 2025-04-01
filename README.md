@@ -84,7 +84,16 @@ After that the 2470 SMU can be connected directly to the SMA -HV port on the Tes
 
 Finally for measurement purposes an oscilloscope can be connected as well to the SMA Ampout respective Hitbus Ports on the TestPCB
 
-These are analog signal outputs directly from the LFoundry_Testchip 
+These are analog signal outputs directly connected to the LFoundry_Testchip outputs.
+
+Now its time to start the python main script from the astropix-pyhton-Lfndry-Test repository together with a YAML config
+file for the internal chip configuration register.
+
+Inside the main.py script the YAML configuration file is then uploaded to the Lfoundry-Testchip. 
+
+Further the main.py creates an injection signal as a testsignal instead of an radiation source which would generated real gamma photons to detect.
+
+This injection signal can be configured from the main.py signal accordingly. It is thus flexible in amplitude, frequency etc.
 
 ## Results
 
@@ -92,6 +101,10 @@ These are analog signal outputs directly from the LFoundry_Testchip
 
 ### I-V Curve Measurements
 
-With an increasing negative potential the depletion region of the reversed biased photosensor diode increases as well until it becomes fully depleted at around -200V 
+With an increasing negative potential the depletion region of the reversed biased photosensor diode increases as well until it becomes fully depleted at around -200V
+
+<p align="center">
+    <img src="docu/ui_test.png" alt="placeholder" width="100%" height="100%">
+</p>
 
 
