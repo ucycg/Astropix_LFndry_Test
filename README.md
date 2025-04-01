@@ -66,6 +66,8 @@ The Astropix Lfoundry Testchip possesses a configuration register for different 
 
 An overview of this register topology is given below.
 
+
+
 #### Ampout and Hitbus measurements
 
 First of all the generated bitfile for the FPGA hardwaredesign has to be installed via the PROG. USB micro port. This can be executed via Vivado directly in the GUI mode via the Hardware Manager 
