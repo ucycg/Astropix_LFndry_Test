@@ -1,4 +1,4 @@
-# Astropix_LFndry_Test
+# Astropix_LFoundry_Test
 
 <p align="center">
     <img src="docu/Astropix_LFndry_Testchip.png" alt="placeholder" width="30%" height="30%">
