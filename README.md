@@ -36,7 +36,7 @@ First of all the requirements until this step here are listed.
 2. Further a Nexus Video FPGA Testboard and a connected  GECCO PCB including an injection card for Ampout/Hitbus measurements
 3. Power Supply with 3 distinct sources for the Gecco PCB to generate Testchip voltages
 4. SMU to generate the HV Signal 
-5. SMA connector cables for analogue oscilloscope measurement and to connect the SMU with the PCB
+5. SMA connector cables for analog oscilloscope measurement and to connect the SMU with the PCB
 
 ### Setup
 
@@ -65,8 +65,6 @@ Further the LF_TST_PREC_BREAKDOWN_SVMI_TSP.py performs a more narrow analysis ar
 The Astropix Lfoundry Testchip possesses a configuration register for different analog current sources and internal voltages.
 
 An overview of this register topology is given below.
-
-
 
 #### Ampout and Hitbus measurements
 
