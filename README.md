@@ -62,7 +62,49 @@ Further the LF_TST_PREC_BREAKDOWN_SVMI_TSP.py performs a more narrow analysis ar
 
 The Astropix Lfoundry Testchip possesses a configuration register for different analog current sources and internal voltages.
 
-An overview of this register topology is given below.
+An overview of this register topology is given below together with a short description.
+
+##### Column Control 
+
+| Config Register | no. Bit | Description |
+| --- | --- | --- |
+| `EnInj` | 1 Bit     | Set this Bit to '1' enable the Injection Signal input for the entire column  |
+| `RamWr` | 5 Bit     | **4 bit** as write signals lines for the Comparator TrimDAC, **1 bit** write signal line for the enable signal of the comparator  |
+| `Amp` | 1 Bit       | Set to '1' to multiplex the amplifier output of **one single** pixel to the chip physical Ampout Port for analog measurements|
+| `Inj` | 1 Bit       |Enable the injection signal for a specific pixel |
+| `RamIn` | 1 Bit     | Bitline for the internal RAM containing 1 Bit of data either '0' or '1' |
+| `EnB_HBRec` | 1 Bit | Inverted Enable Signal for the Hitbus Signal Output |
+
+The described configuration registers exist for each of the 3 pixels on chip 
+
+##### Bias Block
+
+| Config Register | no. Bit | Description |
+| --- | --- | --- |
+| `idac 15`     | 6 Bit       |  |
+| `idac 14`     | 6 Bit       |  |
+| `idac 13`     | 6 Bit       | pfoll Bias of Amput Source Follower |
+| `idac 12`     | 6 Bit       | phb Pull up current source for Hitbus |
+| `idac 8`      | 6 Bit       | pdac trimDAC maximum tuning strom per Pixel |
+| `idac 11`     | 6 Bit       | nbias  weak Current N-well 1.8V pull up: important **Tn-wellBias < Tamp**! |
+| `idac 10`     | 6 Bit       |  |
+| `VNBiasComp`  | 6 Bit       | Bias Strom Comparator |
+| `VN`          | 6 Bit       | Bias current Amplifier --> Look at Razavi Amplification formula|
+| `idac6`       | 6 Bit       | VNFB Feedback current --> comes with a Feedbackcapacity for the circuit |
+| `idac 7`      | 6 Bit       | BLRes --> Highpass output filtering, high value means weak filtering and vice versa, takes influes of time of threshold (TOT) of Hitbus signal |
+| `VNSF`        | 6 Bit       | Source Follower Amp as sub of Amplifier, changes to low Rout + DC Level Shifting of Inj Transistor inside Amplifier |
+| `idac 3`      | 6 Bit       | VPload doesn't increase Amplification but has influence on Bandwidth |
+| `idac 2`      | 6 Bit       |  |
+| `VNBiasRec2`  | 1 Bit       |  |
+| `VNBiasRec`   | 1 Bit       |  |
+
+##### Vdac Configuration Register
+
+| Config Register | no. Bit | Description |
+| --- | --- | --- |
+| `BL`      |  8 Bit       | Set the Voltage for the HP filtering output of the amplifier |
+| `Vth`     |  8 Bit       | Set the comparator threshold voltage |
+| `Vcasc`   |  8 Bit       | Set the voltage for the cascode inside the amplifier |
 
 #### Ampout and Hitbus measurements
 
