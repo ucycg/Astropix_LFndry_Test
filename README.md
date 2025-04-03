@@ -62,9 +62,11 @@ Further the LF_TST_PREC_BREAKDOWN_SVMI_TSP.py performs a more narrow analysis ar
 
 The Astropix Lfoundry Testchip possesses a configuration register for different analog current sources and internal voltages.
 
+This configuration register can be set from a .yaml file inside the config folder of the astropix-python-LFndry-Test repository.
+
 An overview of this register topology is given below together with a short description.
 
-##### Column Control 
+##### Column Control Configuration Register
 
 | Config Register | no. Bit | Description |
 | --- | --- | --- |
@@ -77,7 +79,7 @@ An overview of this register topology is given below together with a short descr
 
 The described configuration registers exist for each of the 3 pixels on chip 
 
-##### Bias Block
+##### Bias Block Configuration Register
 
 | Config Register | no. Bit | Description |
 | --- | --- | --- |
