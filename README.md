@@ -10,6 +10,13 @@ The measurements conducted so far are:
 2. I-V Curve of the -HV photodiode with an 2470 Keithley SMU
 3. Analog Hitbus signal measurement after the Astropix comparator
 
+### Analog Signal Processing Chain
+
+<p align="center">
+    <img src="docu/schematic_astropix_analog_chain.svg" alt="placeholder" width="300%" height="300%">
+</p>
+
+
 ### Repository structure
 
 So far the Astropix_LFndry_Test repository contains 3 different sub repositories.
